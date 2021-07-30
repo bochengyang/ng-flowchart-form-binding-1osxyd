@@ -1,0 +1,28 @@
+<main>
+  <div id="palette">
+    <section>
+      <div class="plugin-op" *ngFor="let item of items" [ngFlowchartStep]="{
+          template: normalStep,
+          type: item.type,
+          data: item.data
+        }">
+        <span>{{ item.name }}</span>
+      </div>
+    </section>
+
+    <section>
+      <button (click)="showUpload()">Upload JSON</button>
+    </section>
+    <section>
+      <button (click)="clearData()">Clear Flow</button>
+    </section>
+
+    <ng-template #normalStep let-data>
+      <div class="card" [attr.name]="data.data.name" #card (click)="onDelete(data.id)">
+        <span>{{ data.data.name }}</span>
+      </div>
+    </ng-template>
+  </div>
+  <div id="canvas" ngFlowchartCanvas [ngFlowchartOptions]="options" [disabled]="disabled"
+    [ngFlowchartCallbacks]="callbacks"></div>
+</main>
