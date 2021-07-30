@@ -1,0 +1,7 @@
+@use '~@angular/material' as mat;
+
+$ansm-primary: mat.define-palette(mat.$indigo-palette, 800, 300, 900);
+$ansm-accent: mat.define-palette(mat.$light-blue-palette);
+$ansm-warn: mat.define-palette(mat.$pink-palette, 600);
+
+$ansm-theme: mat.define-light-theme($ansm-primary, $ansm-accent, $ansm-warn);

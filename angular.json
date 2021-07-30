@@ -3,10 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ang12": {
+    "f2e": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "changeDetection": "OnPush",
           "style": "scss"
         },
         "@schematics/angular:application": {
@@ -20,21 +21,24 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ang12",
+            "outputPath": "dist/f2e",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "uuid"
+           ]
           },
           "configurations": {
             "production": {
@@ -73,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ang12:build:production"
+              "browserTarget": "f2e:build:production"
             },
             "development": {
-              "browserTarget": "ang12:build:development"
+              "browserTarget": "f2e:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ang12:build"
+            "browserTarget": "f2e:build"
           }
         },
         "test": {
@@ -100,7 +104,8 @@
               "src/assets"
             ],
             "styles": [
-             
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -108,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "ang12"
+  "defaultProject": "f2e"
 }

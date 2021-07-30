@@ -1,0 +1,49 @@
+{
+  "ansm.demo.inject.createtable": {
+    "title": "Create table",
+    "placeholder1": "Table name",
+    "placeholder2": "Table comment",
+    "placeholder3": "Column name",
+    "placeholder4": "Column information",
+    "form": {
+      "send": "Send",
+      "clear": "Clear",
+      "error": {
+        "error1": "is required"
+      },
+      "notificationText": "Table created!"
+    }
+  },
+  "ansm.demo.inject.uploaddata": {
+    "title": "Upload data",
+    "placeholder1": "Table name",
+    "placeholder2": "Actions",
+    "placeholder3": "File name",
+    "form": {
+      "send": "Send",
+      "clear": "Clear",
+      "error": {
+        "error1": "is required"
+      },
+      "notificationText": "Data uploaded!"
+    }
+  },
+  "ansm.demo.inject.personal": {
+    "title": "Personal Table List"
+  },
+  "ansm.demo.inject.explore": {
+    "title": "Explore Tables",
+    "input": "Search keyword",
+    "tooltip": {
+      "search": "Search"
+    },
+    "dialog": {
+      "detail": {
+        "title": "Information"
+      },
+      "preview": {
+        "title": "Preview"
+      }
+    }
+  }
+}
